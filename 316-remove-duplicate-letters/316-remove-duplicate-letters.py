@@ -1,7 +1,7 @@
 class Solution:
     def removeDuplicateLetters(self, s: str) -> str:
-        result = []
-        counter = collections.Counter(s)
+        result, counter = [], collections.Counter(s)
+        
         for char in s:
             counter[char] -= 1
             if char in result:
