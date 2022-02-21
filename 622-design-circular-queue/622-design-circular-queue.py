@@ -26,7 +26,7 @@ class MyCircularQueue:
         return -1 if self.q[self.p1] is None else self.q[self.p1]
 
     def Rear(self) -> int:
-        return -1 if self.q[(self.p2 + self.maxlen - 1) % self.maxlen] is None else self.q[(self.p2 + self.maxlen - 1) % self.maxlen]
+        return -1 if self.q[self.p2 - 1] is None else self.q[self.p2 - 1]
 
     def isEmpty(self) -> bool:
         return self.p1 == self.p2 and self.q[self.p1] is None
