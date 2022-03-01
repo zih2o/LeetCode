@@ -2,7 +2,8 @@ class Solution:
     def letterCombinations(self, digits: str) -> List[str]:
         def dfs(index: int, path: str):
             if len(path) == len(digits):
-                    result.append(path)                
+                    result.append(path)  
+                    return
             for i in range(index, len(digits)):
                 for j in dic[digits[i]]:
                     dfs(i+1, path + j)
