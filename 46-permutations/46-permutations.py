@@ -6,6 +6,7 @@ class Solution:
         def dfs(elements):
             if len(elements) == 0:
                 result.append(prev_elements[:])
+                return
             
             for e in elements:
                 next_elements = elements[:]
