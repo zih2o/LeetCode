@@ -1,12 +1,13 @@
 class Solution:
     def fib(self, n: int) -> int:
         
-        Fn = collections.defaultdict(int)
-        
-        Fn[0] = 0
-        Fn[1] = 1
+        x, y = 0, 1
+        if n==1:
+            return 1
+        elif n==0:
+            return 0
         
         for i in range(2, n+1):
-            Fn[i] = Fn[i-1] + Fn[i-2]
+            x, y = y, x+y
             
-        return Fn[n]
+        return y
